@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: christianiapod
+  labels:
+    role: myrole
+spec:
+  containers:
+    - name: christiania
+      image: christiania:0.0.1
+      ports:
+        - name: web
+          containerPort: 5000
+          protocol: TCP
+
+    - name: someotherpod
+      image: redis
+      
